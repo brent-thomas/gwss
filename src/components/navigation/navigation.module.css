@@ -7,7 +7,6 @@
 }
 
 
-
 .width {
     flex: 1;
 }
@@ -44,6 +43,7 @@
     .logoContainer {
         padding-bottom: 0;
         padding-top: 10px;
+        display: flex;
     }
     
 }

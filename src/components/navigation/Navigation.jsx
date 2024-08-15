@@ -24,6 +24,12 @@ const Navigation = () => {
             <div style={{textAlign:'center'}}>
                 <img src={logo} className={styles.logo}/>
             </div>
+            {width > 1024 ? 
+            <div>
+              <p>Call us today: 404-516-8077</p>
+            </div>
+            :null
+            }
             {/* <div className={styles.icon}>
                 {width > 1024 ? 
                 <p>About</p>

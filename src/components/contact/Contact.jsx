@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './contact.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudMeatball } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook} from '@fortawesome/free-brands-svg-icons'
 import {Link} from 'react-router-dom'
 const Contact = () => {
   return (
@@ -19,6 +19,15 @@ const Contact = () => {
             <div className={styles.socials}>
                 <Link to="https://www.facebook.com/Irwinfarms" target='_blank'>
                     <FontAwesomeIcon icon={faFacebook}/>
+                </Link>
+                <Link to="https://www.google.com/maps/place/3084+Arena+Rd,+Unadilla,+GA+31091/@32.2459835,-83.7435137,16z/data=!3m1!4b1!4m6!3m5!1s0x88f3d2f57856e2e1:0x6096f2b30e994d68!8m2!3d32.2459791!4d-83.7386428!16s%2Fg%2F11gdkznyvk?entry=ttu" target='_blank'>
+                    <FontAwesomeIcon icon={faLocationDot}/>
+                </Link>
+                <Link to="mailto:irwinfarms@yahoo.com" target='_blank'>
+                    <FontAwesomeIcon icon={faEnvelope}/>
+                </Link>
+                <Link to='tel:+14045168077' target='_blank'>
+                    <FontAwesomeIcon icon={faPhone}/>
                 </Link>
             </div>
         </div>

@@ -17,9 +17,9 @@
 }
 
 .headerImage img {
-    height: 500px;
+    aspect-ratio: 1/1;
     width: 100%;
-    margin: 0;
+    margin-bottom: -7px;
 }
 
 .familyOwned {
@@ -61,7 +61,9 @@
 
 
 .familyOwned_photos img {
-    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
     margin-bottom: 2em;
     display: block;
 }
@@ -130,15 +132,18 @@
 }
 
 .gallery div {
-    width: 48%;
+    flex: 1 1 calc(50% - 10px); /* Adjust to control spacing */
+    margin: 5px;
 }
 
 .gallery img {
-    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     opacity: 0;
     transform: translateY(40px);
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
+
 
 .gallery img.show {
     opacity: 1;
@@ -155,18 +160,43 @@
         position: relative;
     }
 
+    .section.bkgd_yellow {
+        background-color: #fff;
+        display: flex;
+        background-image: url('../../assets/wheat_field.jpg');
+        background-repeat: repeat;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        position: relative;
+        padding-top: 7em;
+        padding-bottom: 7em;
+
+    }
+
+    .overlay {
+        background-color: #ffffff;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        opacity: 0.1;
+    }
+
    
 
 
     .headerText {
-        width: 60%;
+        margin: auto;
+        width: 75%;
         background-color: #f8bd0b;
-        height: 100%;
         padding: 2em;
     }
 
     .headerImage {
-        width: 40%;
+        width: 55%;
+        aspect-ratio: 1/1;
         display: none;
     }
 
@@ -176,6 +206,12 @@
         text-align: left;
         justify-content: center;
     }
+
+    .gallery div {
+        flex: 1 1 calc(33% - 20px); /* Adjust to control spacing */
+        margin: 7px;
+    }
+    
 
     
 
@@ -199,17 +235,6 @@
     }
 
 
-    .section.bkgd_yellow {
-        background-color: #fff;
-        background-image: url('../../assets/wheat_field.jpg');
-        background-repeat: repeat;
-        justify-content: flex-start;
-        z-index: 1000;
-        position: relative;
-        padding-top: 7em;
-        padding-bottom: 7em;
-
-    }
 
     .offerings .flex_container {
         display: flex;
@@ -224,7 +249,7 @@
 
 @media(min-width:1400px){
     .headerText {
-        width: 40%;
+        width: 50%;
     }
 
     .familyOwned div {
@@ -247,6 +272,36 @@
 
 
 } 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.headerText h1,
+.headerText p,
+.headerText button {
+    opacity: 0;
+    animation: fadeInUp 1.7s ease-out forwards;
+}
+
+/* Stagger the animation timing for a more dynamic effect */
+/* .headerText h1 {
+    animation-delay: 0.2s;
+}
+.headerText p {
+    animation-delay: 0.4s;
+}
+
+.headerText button {
+    animation-delay: 0.6s;
+} */
+
 /* @media(min-width:1500px) {
     .headerText {
         width: 60%;

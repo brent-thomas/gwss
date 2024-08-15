@@ -5,6 +5,12 @@ import Contact from '../../components/contact/Contact'
 import farmSign from '../../assets/irwin_farms_sign.jpg'
 import tractorInField from '../../assets/tractor_wheat_field.jpg'
 import FifteenYears from '../../assets/15_years.webp'
+import image1 from '../../assets/irwin_farms_field.jpg'
+import image2 from '../../assets/round_bales.jpg'
+import image3 from '../../assets/loaded_truck.jpg'
+import image4 from '../../assets/square_field.jpg'
+import image5 from '../../assets/loaded_truck_2.jpg'
+import image6 from '../../assets/field_fence.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrailer, faTruck, faWheatAwn } from '@fortawesome/free-solid-svg-icons'
 
@@ -63,7 +69,7 @@ const Home = () => {
                     }
                 });
             },
-            { threshold: 0.3 } 
+            { threshold: 0.7 } 
         );
 
         iconsRef.current.forEach(icon => {
@@ -104,9 +110,10 @@ const Home = () => {
   return (
     <div className={`${styles.container}`}>
         <div className={styles.headerContainer}>
+           
             
-
             <div className={`${styles.section} ${styles.bkgd_yellow} ${width > 1024 ? 'pd-hz': null}`}>
+                <div className={styles.overlay}></div>
                 <div className={`pd-hz ${styles.headerText}`}>
                     <h1 style={{fontSize:'40px', color:'#0F1109', fontFamily:'Poppins'}}>
                         Georgia's #1 Bulk Wheat Straw Supplier
@@ -118,6 +125,9 @@ const Home = () => {
                     <img src={WheatFarmOne}/>
                 </div>
             </div>
+
+        </div>
+
 
             <div className={`pd-hz ${styles.familyOwned}`}>
                 <div>
@@ -204,38 +214,37 @@ const Home = () => {
 
             <div className={`pd-hz ${styles.gallery}`}>
                 <div>
-                    <img src={farmSign}
+                    <img src={image1}
                      ref={el => imageRefs.current[0] = el} 
                     />
                 </div>
                 <div>
-                    <img src={farmSign}
+                    <img src={image2}
                      ref={el => imageRefs.current[1] = el} 
                     />
                 </div>
                 <div>
-                    <img src={farmSign}
+                    <img src={image3}
                      ref={el => imageRefs.current[2] = el} 
                     />
                 </div>
                 <div>
-                    <img src={farmSign}
+                    <img src={image4}
                      ref={el => imageRefs.current[3] = el} 
                     />
                 </div>
                 <div>
-                    <img src={farmSign}
+                    <img src={image5}
                      ref={el => imageRefs.current[4] = el} 
                     />
                 </div>
                 <div>
-                    <img src={farmSign}
+                    <img src={image6}
                      ref={el => imageRefs.current[5] = el} 
                     />
                 </div>
             </div>
 
-        </div>
         
 
         {/* <div className={`${styles.section} ${styles.bkgd_yellow}`}>
