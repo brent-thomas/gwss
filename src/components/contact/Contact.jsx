@@ -1,21 +1,41 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styles from './contact.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook} from '@fortawesome/free-brands-svg-icons'
+import emailjs from '@emailjs/browser'
 import {Link} from 'react-router-dom'
+
 const Contact = () => {
+    const contact_form = useRef()
+    const sendEmail = () => {
+        emailjs.sendForm(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            contact_form.current,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          )
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
+
   return (
     <div className={`pd-hz ${styles.container} `}>
         <div className={styles.text_container}>  
             <h1>Get in touch with any questions</h1>
-            <p style={{marginTop:'2em'}}>Address</p>
-            <p style={{fontSize:'25px'}}>3084 Arena Rd</p>
-            <p style={{fontSize:'25px'}}>Unadilla, GA 31091</p>
-            <p style={{marginTop:'2em'}}>Contact</p>
+            <p style={{marginTop:'0.5em', fontWeight:'bold'}}>Sales & Delivery</p>
+            <p>BRYAN IRWIN</p>
             <p style={{fontSize:'25px'}}>404-516-8077</p>
+            <p style={{marginTop:'0.5em', fontWeight:'bold'}}>Office & Customer Service</p>
+            <p>BRANDON IRWIN</p>
             <p style={{fontSize:'25px'}}>678-907-5650</p>
-            <p style={{fontSize:'25px'}}>irwinfarms@yahoo.com</p>
+            <p style={{fontSize:'25px', marginTop:'0.5em', marginBottom:'0.5em'}}>irwinfarms@yahoo.com</p>
             <div className={styles.socials}>
                 <Link to="https://www.facebook.com/Irwinfarms" target='_blank'>
                     <FontAwesomeIcon icon={faFacebook}/>
@@ -32,7 +52,8 @@ const Contact = () => {
             </div>
         </div>
         <div className={styles.form_container}>
-            <form className={styles.contact_form}>
+            <h1>Send us a message: </h1>
+            <form className={styles.contact_form} ref={contact_form}>
                 <div className={styles.input_flex}>
                     <div>
                         <label>First Name</label>
@@ -61,7 +82,9 @@ const Contact = () => {
                 <textarea type="text" name="message">
 
                 </textarea>
-                <button type='button'>Send</button> 
+                <button onClick={()=>{
+                    sendEmail()
+                }}type='button'>Send</button> 
             </form>
         </div>
       

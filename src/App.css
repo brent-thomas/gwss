@@ -17,15 +17,15 @@
 
 @media(min-width:768px){
   .pd-hz {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }
 
 
 @media(min-width:1268px){
   .pd-hz {
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    padding-left: 10.5%;
+    padding-right: 10.5%;
   }
 }

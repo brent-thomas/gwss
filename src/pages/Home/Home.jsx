@@ -5,7 +5,7 @@ import Contact from '../../components/contact/Contact'
 import farmSign from '../../assets/irwin_farms_sign.jpg'
 import tractorInField from '../../assets/tractor_wheat_field.jpg'
 import FifteenYears from '../../assets/15_years.webp'
-import image1 from '../../assets/irwin_farms_field.jpg'
+import image1 from '../../assets/trailers.jpg'
 import image2 from '../../assets/round_bales.jpg'
 import image3 from '../../assets/loaded_truck.jpg'
 import image4 from '../../assets/square_field.jpg'
@@ -131,8 +131,8 @@ const Home = () => {
 
             <div className={`pd-hz ${styles.familyOwned}`}>
                 <div>
-                <h1>Meet the Irwin Family</h1>
-                <p><em>Proud owners of Irwin Farms</em></p>
+                <h1>Family Owned & Operated</h1>
+            
                 </div>
                 <div>
                 <p>
@@ -178,7 +178,7 @@ const Home = () => {
             </div>
 
             <div className={`pd-hz ${styles.offerings}`}>
-                <h1 style={{fontSize:'40px'}}>
+                <h1 style={{fontSize:'33px'}}>
                     Products & Services
                 </h1>
                 <div className={styles.flex_container}>
@@ -190,7 +190,7 @@ const Home = () => {
                         />
                         <h2>Square Bales</h2>
                         
-                        <p>Our Two String Square Bales are tightly packed to maximize value, making them perfect for large-scale erosion control and commercial agricultural projects.</p>
+                        <p>Our Two String Square Bales are tightly packed to maximize value, making them perfect for large-scale erosion control and commercial projects.</p>
                     </div>
 
                     <div className={styles.card}>
@@ -214,7 +214,7 @@ const Home = () => {
 
             <div className={`pd-hz ${styles.gallery}`}>
                 <div>
-                    <img src={image1}
+                    <img src={image6}
                      ref={el => imageRefs.current[0] = el} 
                     />
                 </div>
@@ -239,7 +239,7 @@ const Home = () => {
                     />
                 </div>
                 <div>
-                    <img src={image6}
+                    <img src={image1}
                      ref={el => imageRefs.current[5] = el} 
                     />
                 </div>
