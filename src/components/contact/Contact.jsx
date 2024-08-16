@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import styles from './contact.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -24,6 +24,12 @@ const Contact = () => {
             },
           );
       };
+
+      useEffect(()=>{
+        console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+        console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+        console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+      },[])
 
   return (
     <div className={`pd-hz ${styles.container} `}>
