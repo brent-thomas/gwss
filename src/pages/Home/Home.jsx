@@ -11,6 +11,7 @@ import image3 from '../../assets/loaded_truck.jpg'
 import image4 from '../../assets/square_field.jpg'
 import image5 from '../../assets/loaded_truck_2.jpg'
 import image6 from '../../assets/field_fence.jpg'
+import image7 from '../../assets/tractor_field_2.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrailer, faTruck, faWheatAwn } from '@fortawesome/free-solid-svg-icons'
 
@@ -165,12 +166,12 @@ const Home = () => {
                     <div className={`${styles.fifteen_container} ${showFifteen ? styles.showFifteen : ''}`}>
                         <img src={FifteenYears} className={styles.fifteen}/>
                     </div>
-                    <img src={tractorInField}/>
+                    <img src={image7}/>
                 </div>
 
                 : 
                 <div>
-                    <img src={tractorInField}/>
+                    <img src={image7}/>
                 </div>
                 }
                

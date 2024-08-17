@@ -29,6 +29,8 @@
     padding: 10px;
     margin-bottom: 1em;
     border: none;
+     cursor: pointer;
+    transition: background-color 0.3s ease;
 } 
 
 .contact_form input,
@@ -69,6 +71,41 @@
 .form_container h1 {
     margin-bottom: 1em;
     text-align: center;
+}
+
+.contact_form button:hover,
+.contact_form button:active {
+    background-color: #6e1d07; 
+}
+
+
+/*/////////////*/
+.contact_form {
+}
+
+.submit_success {
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.form_container .submit_success h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.checkIcon {
+    font-size: 80px;
+    color: #932304;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.error {
+    color: red;
+    margin-top: -2em;
+    margin-bottom: 2em;
+    font-size: 12px;
+
 }
 
 @media(min-width:768px) {
