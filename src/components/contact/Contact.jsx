@@ -10,10 +10,10 @@ const Contact = () => {
     const contact_form = useRef()
     const sendEmail = () => {
         emailjs.sendForm(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID,
-            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             contact_form.current,
-            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
           )
           .then(
             () => {
@@ -26,10 +26,13 @@ const Contact = () => {
       };
 
       useEffect(()=>{
-        console.log(process.env)
-        console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
-        console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-        console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
+        console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+        console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+        // console.log(process.env)
+        // console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+        // console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+        // console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
       },[])
 
   return (
