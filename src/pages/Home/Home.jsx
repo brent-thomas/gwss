@@ -2,16 +2,15 @@ import React, {useRef, useState, useEffect} from 'react'
 import WheatFarmOne from '../../assets/wheat_farm_one.jpg'
 import styles from './Home.module.css'
 import Contact from '../../components/contact/Contact'
-import farmSign from '../../assets/irwin_farms_sign.jpg'
-import tractorInField from '../../assets/tractor_wheat_field.jpg'
+import farmSign from '../../assets/irwin_farms_sign_commercial_wheat_straw_supplier.jpg'
 import FifteenYears from '../../assets/15_years.webp'
-import image1 from '../../assets/trailers.jpg'
-import image2 from '../../assets/round_bales.jpg'
-import image3 from '../../assets/loaded_truck.jpg'
-import image4 from '../../assets/square_field.jpg'
-import image5 from '../../assets/loaded_truck_2.jpg'
-import image6 from '../../assets/field_fence.jpg'
-import image7 from '../../assets/tractor_field_2.jpg'
+import image1 from '../../assets/bulk-wheat-straw-trailers.jpg';
+import image2 from '../../assets/wheat-straw-bales-round.jpg';
+import image3 from '../../assets/commercial-wheat-straw-loaded-truck.jpg';
+import image4 from '../../assets/wheat-straw-square-bales.jpg';
+import image5 from '../../assets/bulk-wheat-straw-loaded-truck.jpg';
+import image6 from '../../assets/wheat-straw-delivery.jpg';
+import image7 from '../../assets/georgia-tractor-wheat-straw-field.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrailer, faTruck, faWheatAwn } from '@fortawesome/free-solid-svg-icons'
 
@@ -153,11 +152,15 @@ const Home = () => {
                         <div className={`${styles.fifteen_container} ${showFifteen ? styles.showFifteen : ''}`}>
                             <img src={FifteenYears} className={styles.fifteen}/>
                         </div>
-                        <img src={farmSign}/>
+                        <img 
+                        alt='Irwin Farms commercial wheat straw supplier sign in Unadilla, Georgia, established in 2009, bulk wheat straw farm in a large field.'
+                        src={farmSign}/>
                     </div>
                     :
                     <div>
-                        <img src={farmSign}/>
+                        <img
+                        alt='Irwin Farms commercial wheat straw supplier sign in Unadilla, Georgia, established in 2009, bulk wheat straw farm in a large field.' 
+                        src={farmSign}/>
                     </div>
                 }
 
@@ -166,12 +169,17 @@ const Home = () => {
                     <div className={`${styles.fifteen_container} ${showFifteen ? styles.showFifteen : ''}`}>
                         <img src={FifteenYears} className={styles.fifteen}/>
                     </div>
-                    <img src={image7}/>
+                    <img src={image7}
+                        alt='Combine harvester cutting wheat straw for bulk commercial supply, Irwin Farms, celebrating 15 years as a bulk wheat straw supplier in Georgia.'
+                    />
                 </div>
 
                 : 
                 <div>
-                    <img src={image7}/>
+                    <img 
+                    src={image7}
+                    alt='Combine harvester cutting wheat straw for bulk commercial supply, Irwin Farms, celebrating 15 years as a bulk wheat straw supplier in Georgia.'
+                    />
                 </div>
                 }
                
@@ -215,33 +223,45 @@ const Home = () => {
 
             <div className={`pd-hz ${styles.gallery}`}>
                 <div>
-                    <img src={image6}
-                     ref={el => imageRefs.current[0] = el} 
+                    <img 
+                        src={image6} 
+                        ref={el => imageRefs.current[0] = el}
+                        alt="Field of wheat straw bales ready for delivery with fence"
                     />
                 </div>
                 <div>
-                    <img src={image2}
-                     ref={el => imageRefs.current[1] = el} 
+                    <img 
+                        src={image2} 
+                        ref={el => imageRefs.current[1] = el}
+                        alt="Bulk wheat straw round bales stacked in warehouse ready for commercial delivery"
                     />
                 </div>
                 <div>
-                    <img src={image3}
-                     ref={el => imageRefs.current[2] = el} 
+                    <img 
+                        src={image3} 
+                        ref={el => imageRefs.current[2] = el}
+                        alt="Bulk wheat straw bales loaded on a commercial delivery truck for large-scale projects"
                     />
                 </div>
                 <div>
-                    <img src={image4}
-                     ref={el => imageRefs.current[3] = el} 
+                    <img 
+                        src={image4} 
+                        ref={el => imageRefs.current[3] = el}
+                        alt="Square wheat straw bales in a large commercial field"
                     />
                 </div>
                 <div>
-                    <img src={image5}
-                     ref={el => imageRefs.current[4] = el} 
+                    <img 
+                        src={image5} 
+                        ref={el => imageRefs.current[4] = el}
+                        alt="Truck loaded with bulk wheat straw bales in a commercial setting"
                     />
                 </div>
                 <div>
-                    <img src={image1}
-                     ref={el => imageRefs.current[5] = el} 
+                    <img 
+                        src={image1} 
+                        ref={el => imageRefs.current[5] = el}
+                        alt="Trailers used for bulk wheat straw delivery"
                     />
                 </div>
             </div>
